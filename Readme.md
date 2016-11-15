@@ -1,7 +1,7 @@
 # Личный проект «Пиксель хантер» [![Build status][travis-image]][travis-url]
 
 * Студент: [Вадим Иванов](https://up.htmlacademy.ru/ecmascript/1/user/6537).
-* Наставник: `Неизвестно`.
+* Наставник: `Валерий Яцко`.
 
 ---
 
