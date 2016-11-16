@@ -11,6 +11,7 @@ const mqpacker = require('css-mqpacker');
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
+const babel = require('gulp-babel');
 
 gulp.task('style', function () {
   gulp.src('sass/style.scss')
@@ -38,6 +39,7 @@ gulp.task('style', function () {
 gulp.task('scripts', function () {
   return gulp.src('js/**/*.js')
     .pipe(plumber())
+    .pipe(babel())
     .pipe(gulp.dest('build/js/'));
 });
 
