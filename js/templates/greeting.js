@@ -1,4 +1,4 @@
-import getElementFromTemplate from './getElementFromTemplate';
+import getElementFromTemplate from '../getElementFromTemplate';
 
 const template =
   `<div class="greeting  central--blur">
