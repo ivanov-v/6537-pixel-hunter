@@ -13,6 +13,7 @@ const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
+const webpack = require('gulp-webpack');
 
 gulp.task('style', function () {
   gulp.src('sass/style.scss')
@@ -38,11 +39,25 @@ gulp.task('style', function () {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src('js/**/*.js')
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(babel())
-    .pipe(sourcemaps.write('.'))
+  return gulp.src('js/main.js')
+    .pipe(webpack({
+      output: {
+        filename: 'main.js'
+      },
+      devtool: 'source-map',
+      module: {
+        loaders: [
+          {
+            test: /\.js$/,
+            exclude: /(node_modules|bower_components)/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015']
+            }
+          }
+        ]
+      }
+    }))
     .pipe(gulp.dest('build/js/'));
 });
 
@@ -74,7 +89,7 @@ gulp.task('copy', ['copy-html', 'scripts', 'style'], function () {
 });
 
 gulp.task('clean', function () {
-  return del('build');
+  del('build');
 });
 
 gulp.task('serve', ['assemble'], function () {
