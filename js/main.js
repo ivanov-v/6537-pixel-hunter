@@ -21,11 +21,12 @@ import stats from './templates/stats';
 
   // Slides changer
   let mainElement = document.getElementById('main');
-  let switcher = getElementFromTemplate(
-    `<div>
-      <span class="prev"><img src="img/arrow_left.svg" alt="Left" width="50" height="50"></span>
-      <span class="next"><img src="img/arrow_right.svg" alt="Right" width="50" height="50"></span>
-    </div>`);
+  let switcher = getElementFromTemplate(`
+      <div>
+        <span class="prev"><img src="img/arrow_left.svg" alt="Left" width="50" height="50"></span>
+        <span class="next"><img src="img/arrow_right.svg" alt="Right" width="50" height="50"></span>
+      </div>
+  `);
   switcher.style.cssText = 'text-align: center';
   mainElement.after(switcher);
 
