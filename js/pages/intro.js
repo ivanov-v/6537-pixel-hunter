@@ -15,8 +15,6 @@ export default templateElem;
 
 const asterisk = templateElem.querySelector('.intro__asterisk');
 
-const asteriskHandler = (evt) => {
-  renderPage(greeting);
-};
+const asteriskHandler = (evt) => renderPage(greeting);
 
 asterisk.addEventListener('click', asteriskHandler);
