@@ -1,11 +1,11 @@
 import getElementFromTemplate from './getElementFromTemplate';
-import intro from './templates/intro';
-import greeting from './templates/greeting';
-import rules from './templates/rules';
-import game1 from './templates/game-1';
-import game2 from './templates/game-2';
-import game3 from './templates/game-3';
-import stats from './templates/stats';
+import intro from './pages/intro';
+import greeting from './pages/greeting';
+import rules from './pages/rules';
+import game1 from './pages/game-1';
+import game2 from './pages/game-2';
+import game3 from './pages/game-3';
+import stats from './pages/stats';
 
 (() => {
   // Rules
