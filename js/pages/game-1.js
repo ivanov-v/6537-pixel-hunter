@@ -1,14 +1,16 @@
 import getElementFromTemplate from '../getElementFromTemplate';
 import statsResult from '../templates/statsResult';
+import renderPage from '../renderPage';
+import game2 from './game-2';
 
 const template =
-  `<div>
+  `<div id="game-1">
     <header class="header">
       <div class="header__back">
-          <span class="back">
-            <img src="img/arrow_left.svg" width="45" height="45" alt="Back">
-            <img src="img/logo_small.png" width="101" height="44">
-          </span>
+        <span class="back">
+          <img src="img/arrow_left.svg" width="45" height="45" alt="Back">
+          <img src="img/logo_small.png" width="101" height="44">
+        </span>
       </div>
       <h1 class="game__timer">NN</h1>
       <div class="game__lives">
@@ -62,3 +64,13 @@ const template =
 
 const templateElem = getElementFromTemplate(template);
 export default templateElem;
+
+const answers = templateElem.querySelectorAll('input');
+
+const answerHandler = (evt) => {
+  renderPage(game2);
+};
+
+[].forEach.call(answers, (answer) => {
+  answer.addEventListener('change', answerHandler);
+});

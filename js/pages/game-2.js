@@ -1,8 +1,10 @@
 import getElementFromTemplate from '../getElementFromTemplate';
 import statsResult from '../templates/statsResult';
+import renderPage from '../renderPage';
+import game3 from './game-3';
 
 const template =
-  `<div>
+  `<div id="game-2">
     <header class="header">
       <div class="header__back">
         <span class="back">
@@ -51,3 +53,13 @@ const template =
 
 const templateElem = getElementFromTemplate(template);
 export default templateElem;
+
+const answers = templateElem.querySelectorAll('input');
+
+const answerHandler = (evt) => {
+  renderPage(game3);
+};
+
+[].forEach.call(answers, (answer) => {
+  answer.addEventListener('change', answerHandler);
+});
