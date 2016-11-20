@@ -6,6 +6,7 @@ import game1 from './pages/game-1';
 import game2 from './pages/game-2';
 import game3 from './pages/game-3';
 import stats from './pages/stats';
+import renderPage from './renderPage';
 
 (() => {
   // Rules
@@ -30,34 +31,36 @@ import stats from './pages/stats';
   switcher.style.cssText = 'text-align: center';
   mainElement.after(switcher);
 
-  let slides = [
-    intro,
-    greeting,
-    rules,
-    game1,
-    game2,
-    game3,
-    stats
-  ];
-  let current = -1;
+  renderPage(intro);
 
-  let select = (index) => {
-    current = index;
-    mainElement.innerHTML = '';
-    mainElement.appendChild(slides[index]);
-  };
-
-  document.querySelector('.next').onclick = (evt) => {
-    evt.preventDefault();
-
-    select(current + 1);
-  };
-
-  document.querySelector('.prev').onclick = (evt) => {
-    evt.preventDefault();
-
-    select(current - 1);
-  };
-
-  select(0);
+  // let slides = [
+  //   intro,
+  //   greeting,
+  //   rules,
+  //   game1,
+  //   game2,
+  //   game3,
+  //   stats
+  // ];
+  // let current = -1;
+  //
+  // let select = (index) => {
+  //   current = index;
+  //   mainElement.innerHTML = '';
+  //   mainElement.appendChild(slides[index]);
+  // };
+  //
+  // document.querySelector('.next').onclick = (evt) => {
+  //   evt.preventDefault();
+  //
+  //   select(current + 1);
+  // };
+  //
+  // document.querySelector('.prev').onclick = (evt) => {
+  //   evt.preventDefault();
+  //
+  //   select(current - 1);
+  // };
+  //
+  // select(0);
 })();
