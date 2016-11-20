@@ -1,1 +1,1 @@
-export default (state) => `<li class="stats__result stats__result--${state}"></li>`;
+export default (state = 'unknown') => `<li class="stats__result stats__result--${state}"></li>`;

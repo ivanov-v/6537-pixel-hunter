@@ -22,8 +22,6 @@ export default templateElem;
 
 const continueButton = templateElem.querySelector('.greeting__continue');
 
-const continueHandler = (evt) => {
-  renderPage(rules);
-};
+const continueHandler = (evt) => renderPage(rules);
 
 continueButton.addEventListener('click', continueHandler);

@@ -56,9 +56,7 @@ export default templateElem;
 
 const answers = templateElem.querySelectorAll('input');
 
-const answerHandler = (evt) => {
-  renderPage(game3);
-};
+const answerHandler = () => renderPage(game3);
 
 [].forEach.call(answers, (answer) => {
   answer.addEventListener('change', answerHandler);

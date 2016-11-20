@@ -54,9 +54,7 @@ export default templateElem;
 
 const answers = templateElem.querySelectorAll('.game__option');
 
-const answerHandler = (evt) => {
-  renderPage(stats);
-};
+const answerHandler = () => renderPage(stats);
 
 [].forEach.call(answers, (answer) => {
   answer.addEventListener('click', answerHandler);
