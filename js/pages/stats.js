@@ -1,4 +1,5 @@
 import getElementFromTemplate from '../getElementFromTemplate';
+import statsResult from '../templates/statsResult';
 
 const template =
   `<div>
@@ -17,16 +18,16 @@ const template =
           <td class="result__number">1.</td>
           <td colspan="2">
             <ul class="stats">
-              <li class="stats__result stats__result--wrong"></li>
-              <li class="stats__result stats__result--slow"></li>
-              <li class="stats__result stats__result--fast"></li>
-              <li class="stats__result stats__result--correct"></li>
-              <li class="stats__result stats__result--wrong"></li>
-              <li class="stats__result stats__result--unknown"></li>
-              <li class="stats__result stats__result--slow"></li>
-              <li class="stats__result stats__result--unknown"></li>
-              <li class="stats__result stats__result--fast"></li>
-              <li class="stats__result stats__result--unknown"></li>
+              ${statsResult('wrong')}
+              ${statsResult('slow')}
+              ${statsResult('fast')}
+              ${statsResult('correct')}
+              ${statsResult('wrong')}
+              ${statsResult('unknown')}
+              ${statsResult('slow')}
+              ${statsResult('unknown')}
+              ${statsResult('fast')}
+              ${statsResult('unknown')}
             </ul>
           </td>
           <td class="result__points">×&nbsp;100</td>
@@ -62,16 +63,16 @@ const template =
           <td class="result__number">2.</td>
           <td>
             <ul class="stats">
-              <li class="stats__result stats__result--wrong"></li>
-              <li class="stats__result stats__result--slow"></li>
-              <li class="stats__result stats__result--fast"></li>
-              <li class="stats__result stats__result--correct"></li>
-              <li class="stats__result stats__result--wrong"></li>
-              <li class="stats__result stats__result--unknown"></li>
-              <li class="stats__result stats__result--slow"></li>
-              <li class="stats__result stats__result--wrong"></li>
-              <li class="stats__result stats__result--fast"></li>
-              <li class="stats__result stats__result--wrong"></li>
+              ${statsResult('wrong')}
+              ${statsResult('slow')}
+              ${statsResult('fast')}
+              ${statsResult('correct')}
+              ${statsResult('wrong')}
+              ${statsResult('unknown')}
+              ${statsResult('slow')}
+              ${statsResult('wrong')}
+              ${statsResult('fast')}
+              ${statsResult('wrong')}
             </ul>
           </td>
           <td class="result__total"></td>
@@ -83,16 +84,16 @@ const template =
           <td class="result__number">3.</td>
           <td colspan="2">
             <ul class="stats">
-              <li class="stats__result stats__result--wrong"></li>
-              <li class="stats__result stats__result--slow"></li>
-              <li class="stats__result stats__result--fast"></li>
-              <li class="stats__result stats__result--correct"></li>
-              <li class="stats__result stats__result--wrong"></li>
-              <li class="stats__result stats__result--unknown"></li>
-              <li class="stats__result stats__result--slow"></li>
-              <li class="stats__result stats__result--unknown"></li>
-              <li class="stats__result stats__result--fast"></li>
-              <li class="stats__result stats__result--unknown"></li>
+              ${statsResult('wrong')}
+              ${statsResult('slow')}
+              ${statsResult('fast')}
+              ${statsResult('correct')}
+              ${statsResult('wrong')}
+              ${statsResult('unknown')}
+              ${statsResult('slow')}
+              ${statsResult('unknown')}
+              ${statsResult('fast')}
+              ${statsResult('unknown')}
             </ul>
           </td>
           <td class="result__points">×&nbsp;100</td>
