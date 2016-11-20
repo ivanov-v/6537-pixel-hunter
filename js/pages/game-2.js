@@ -1,22 +1,19 @@
 import getElementFromTemplate from '../getElementFromTemplate';
 import statsResult from '../templates/statsResult';
+import heart from '../templates/heart';
+import backButton from '../templates/backButton';
 import renderPage from '../renderPage';
 import game3 from './game-3';
 
 const template =
   `<div id="game-2">
     <header class="header">
-      <div class="header__back">
-        <span class="back">
-          <img src="img/arrow_left.svg" width="45" height="45" alt="Back">
-          <img src="img/logo_small.png" width="101" height="44">
-        </span>
-      </div>
+      ${backButton}
       <h1 class="game__timer">NN</h1>
       <div class="game__lives">
-        <img src="img/heart__empty.svg" class="game__heart" alt="Life" width="32" height="32">
-        <img src="img/heart__full.svg" class="game__heart" alt="Life" width="32" height="32">
-        <img src="img/heart__full.svg" class="game__heart" alt="Life" width="32" height="32">
+        ${heart('empty')}
+        ${heart('full')}
+        ${heart('full')}
       </div>
     </header>
     <div class="game">

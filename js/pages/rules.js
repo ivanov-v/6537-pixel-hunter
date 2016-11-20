@@ -1,16 +1,12 @@
 import getElementFromTemplate from '../getElementFromTemplate';
 import renderPage from '../renderPage';
+import backButton from '../templates/backButton';
 import game1 from './game-1';
 
 const template =
   `<div id="rules">
     <header class="header">
-      <div class="header__back">
-        <span class="back">
-          <img src="img/arrow_left.svg" width="45" height="45" alt="Back">
-          <img src="img/logo_small.png" width="101" height="44">
-        </span>
-      </div>
+      ${backButton}
     </header>
     <div class="rules  central--none">
       <h1 class="rules__title">Правила</h1>
