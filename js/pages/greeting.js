@@ -17,13 +17,13 @@ const template =
     <div class="greeting__continue"><span><img src="img/arrow_right.svg" width="64" height="64" alt="Next"></span></div>
   </div>`;
 
+const templateElem = getElementFromTemplate(template);
+export default templateElem;
+
 const continueHandler = (evt) => {
   if (evt.target.closest('.greeting__continue')) {
     renderPage(rules);
   }
 };
 
-document.body.addEventListener('click', continueHandler);
-
-const templateElem = getElementFromTemplate(template);
-export default templateElem;
+document.addEventListener('click', continueHandler);
