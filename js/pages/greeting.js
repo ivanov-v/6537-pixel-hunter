@@ -1,6 +1,6 @@
 import getElementFromTemplate from '../getElementFromTemplate';
-import rules from './rules';
 import renderPage from '../renderPage';
+import rules from './rules';
 
 const template =
   `<div class="greeting  central--blur">
@@ -20,10 +20,10 @@ const template =
 const templateElem = getElementFromTemplate(template);
 export default templateElem;
 
+const continueButton = templateElem.querySelector('.greeting__continue');
+
 const continueHandler = (evt) => {
-  if (evt.target.closest('.greeting__continue')) {
-    renderPage(rules);
-  }
+  renderPage(rules);
 };
 
-document.addEventListener('click', continueHandler);
+continueButton.addEventListener('click', continueHandler);

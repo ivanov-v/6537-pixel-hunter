@@ -2,7 +2,7 @@ import getElementFromTemplate from '../getElementFromTemplate';
 import statsResult from '../templates/statsResult';
 
 const template =
-  `<div>
+  `<div id="stats">
     <header class="header">
       <div class="header__back">
         <span class="back">

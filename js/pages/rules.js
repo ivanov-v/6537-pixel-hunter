@@ -1,9 +1,9 @@
 import getElementFromTemplate from '../getElementFromTemplate';
-import game1 from './game-1';
 import renderPage from '../renderPage';
+import game1 from './game-1';
 
 const template =
-  `<div>
+  `<div id="rules">
     <header class="header">
       <div class="header__back">
         <span class="back">
