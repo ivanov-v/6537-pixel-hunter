@@ -1,4 +1,6 @@
 import getElementFromTemplate from '../getElementFromTemplate';
+import game1 from './game-1';
+import renderPage from '../renderPage';
 
 const template =
   `<div>
@@ -30,3 +32,23 @@ const template =
 
 const templateElem = getElementFromTemplate(template);
 export default templateElem;
+
+const form = templateElem.querySelector('.rules__form');
+const input = form.querySelector('.rules__input');
+const goButton = form.querySelector('.rules__button.continue');
+
+const inputHandler = (evt) => {
+  if (evt.target.value) {
+    goButton.disabled = false;
+  } else {
+    goButton.disabled = true;
+  }
+};
+
+const formHandler = (evt) => {
+  evt.preventDefault();
+  renderPage(game1);
+};
+
+form.addEventListener('submit', formHandler);
+input.addEventListener('input', inputHandler);

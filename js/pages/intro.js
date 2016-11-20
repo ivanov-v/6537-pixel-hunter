@@ -10,13 +10,13 @@ const template =
     </p>
   </div>`;
 
+const templateElem = getElementFromTemplate(template);
+export default templateElem;
+
 const asteriskHandler = (evt) => {
   if (evt.target.className === 'intro__asterisk') {
     renderPage(greeting);
   }
 };
 
-document.body.addEventListener('click', asteriskHandler);
-
-const templateElem = getElementFromTemplate(template);
-export default templateElem;
+document.addEventListener('click', asteriskHandler);
