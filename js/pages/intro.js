@@ -16,7 +16,7 @@ const asteriskHandler = (evt) => {
   }
 };
 
-document.addEventListener('click', asteriskHandler);
+document.body.addEventListener('click', asteriskHandler);
 
 const templateElem = getElementFromTemplate(template);
 export default templateElem;
