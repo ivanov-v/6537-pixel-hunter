@@ -1,4 +1,6 @@
 import getElementFromTemplate from '../getElementFromTemplate';
+import greeting from './greeting';
+import renderPage from '../renderPage';
 
 const template =
   `<div id="intro" class="intro">
@@ -7,6 +9,14 @@ const template =
       Sparnaay.
     </p>
   </div>`;
+
+const asteriskHandler = (evt) => {
+  if (evt.target.className === 'intro__asterisk') {
+    renderPage(greeting);
+  }
+};
+
+document.addEventListener('click', asteriskHandler);
 
 const templateElem = getElementFromTemplate(template);
 export default templateElem;
