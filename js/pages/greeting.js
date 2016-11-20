@@ -1,4 +1,6 @@
 import getElementFromTemplate from '../getElementFromTemplate';
+import rules from './rules';
+import renderPage from '../renderPage';
 
 const template =
   `<div class="greeting  central--blur">
@@ -14,6 +16,14 @@ const template =
     </div>
     <div class="greeting__continue"><span><img src="img/arrow_right.svg" width="64" height="64" alt="Next"></span></div>
   </div>`;
+
+const continueHandler = (evt) => {
+  if (evt.target.closest('.greeting__continue')) {
+    renderPage(rules);
+  }
+};
+
+document.body.addEventListener('click', continueHandler);
 
 const templateElem = getElementFromTemplate(template);
 export default templateElem;
