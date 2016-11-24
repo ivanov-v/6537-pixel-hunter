@@ -52,7 +52,5 @@ const answers = templateElem.querySelectorAll('.game__option');
 const answerHandler = () => renderPage(stats);
 
 [].forEach.call(answers, (answer) => {
-  // answer.addEventListener('click', answerHandler);
-  // answer.addEventListener('click', (evt) => console.log(evt.target, evt.currentTarget));
-  answer.onclick = (evt) => console.log(evt.target, evt.currentTarget);
+  answer.addEventListener('click', answerHandler);
 });
