@@ -5,6 +5,8 @@ import statsResult from '../templates/statsResult';
 import heart from '../templates/heart';
 import backButton from '../templates/backButton';
 import gameTimer from '../templates/gameTimer';
+import gameTask from '../templates/gameTask';
+import gameLives from '../templates/gameLives';
 
 const template =
   `<div id="game-1">
@@ -12,13 +14,11 @@ const template =
       ${backButton}
       ${gameTimer()}
       <div class="game__lives">
-        ${heart('empty')}
-        ${heart('full')}
-        ${heart('full')}
+        ${gameLives(2)}
       </div>
     </header>
     <div class="game">
-      <p class="game__task">Угадайте для каждого изображения фото или рисунок?</p>
+      ${gameTask('Угадайте для каждого изображения фото или рисунок?')}
       <form class="game__content">
         <div class="game__option">
           <img src="http://placehold.it/468x458" alt="Option 1" width="468" height="458">
