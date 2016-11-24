@@ -2,7 +2,6 @@ import getElement from '../getElement';
 import renderPage from '../renderPage';
 import game2 from './game-2';
 import statsResult from '../templates/statsResult';
-import heart from '../templates/heart';
 import backButton from '../templates/backButton';
 import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
@@ -13,9 +12,7 @@ const template =
     <header class="header">
       ${backButton}
       ${gameTimer()}
-      <div class="game__lives">
-        ${gameLives(2)}
-      </div>
+      ${gameLives(3)}
     </header>
     <div class="game">
       ${gameTask('Угадайте для каждого изображения фото или рисунок?')}
