@@ -1,22 +1,18 @@
 import getElement from '../getElement';
 import statsResult from '../templates/statsResult';
-import heart from '../templates/heart';
 import backButton from '../templates/backButton';
 import renderPage from '../renderPage';
 import stats from './stats';
 import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
+import gameLives from '../templates/gameLives';
 
 const template =
   `<div id="game-3">
     <header class="header">
       ${backButton}
       ${gameTimer()}
-      <div class="game__lives">
-        ${heart('empty')}
-        ${heart('full')}
-        ${heart('full')}
-      </div>
+      ${gameLives(1)}
     </header>
     <div class="game">
       ${gameTask('Найдите рисунок среди изображений')}
