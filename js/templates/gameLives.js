@@ -1,7 +1,7 @@
 import heart from './heart';
+const MAX_LIVES = 3;
 
-export default (lives = 3) => {
-  const MAX_LIVES = 3;
+export default (lives = MAX_LIVES) => {
   const emptyLives = MAX_LIVES - lives;
   let gameLives = '';
 
