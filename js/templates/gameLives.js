@@ -6,11 +6,11 @@ export default (lives = 3) => {
   let gameLives = '';
 
   for (let i = 0; i < emptyLives; i++) {
-    gameLives += `${heart('empty')}`;
+    gameLives += `${heart('empty')} `;
   }
 
   for (let i = 0; i < lives; i++) {
-    gameLives += `${heart('full')}`;
+    gameLives += `${heart('full')} `;
   }
 
   return `<div class="game__lives">${gameLives}</div>`;
