@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../getElementFromTemplate';
+import getElement from '../getElement';
 import renderPage from '../renderPage';
 import greeting from './greeting';
 
@@ -10,7 +10,7 @@ const template =
     </p>
   </div>`;
 
-const templateElem = getElementFromTemplate(template);
+const templateElem = getElement(template);
 export default templateElem;
 
 const asterisk = templateElem.querySelector('.intro__asterisk');

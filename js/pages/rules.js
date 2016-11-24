@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../getElementFromTemplate';
+import getElement from '../getElement';
 import renderPage from '../renderPage';
 import backButton from '../templates/backButton';
 import game1 from './game-1';
@@ -26,7 +26,7 @@ const template =
     </div>
   </div>`;
 
-const templateElem = getElementFromTemplate(template);
+const templateElem = getElement(template);
 export default templateElem;
 
 const form = templateElem.querySelector('.rules__form');

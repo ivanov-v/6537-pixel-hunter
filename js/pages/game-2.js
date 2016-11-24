@@ -1,9 +1,9 @@
-import getElementFromTemplate from '../getElementFromTemplate';
+import getElement from '../getElement';
+import renderPage from '../renderPage';
+import game3 from './game-3';
 import statsResult from '../templates/statsResult';
 import heart from '../templates/heart';
 import backButton from '../templates/backButton';
-import renderPage from '../renderPage';
-import game3 from './game-3';
 
 const template =
   `<div id="game-2">
@@ -48,7 +48,7 @@ const template =
     </div>
   </div>`;
 
-const templateElem = getElementFromTemplate(template);
+const templateElem = getElement(template);
 export default templateElem;
 
 const answers = templateElem.querySelectorAll('input');
