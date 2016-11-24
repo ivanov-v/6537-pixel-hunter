@@ -4,12 +4,14 @@ import heart from '../templates/heart';
 import backButton from '../templates/backButton';
 import renderPage from '../renderPage';
 import stats from './stats';
+import gameTimer from '../templates/gameTimer';
+import gameTask from '../templates/gameTask';
 
 const template =
   `<div id="game-3">
     <header class="header">
       ${backButton}
-      <h1 class="game__timer">NN</h1>
+      ${gameTimer()}
       <div class="game__lives">
         ${heart('empty')}
         ${heart('full')}
@@ -17,7 +19,7 @@ const template =
       </div>
     </header>
     <div class="game">
-      <p class="game__task">Найдите рисунок среди изображений</p>
+      ${gameTask('Найдите рисунок среди изображений')}
       <form class="game__content  game__content--triple">
         <div class="game__option">
           <img src="http://placehold.it/304x455" alt="Option 1" width="304" height="455">
