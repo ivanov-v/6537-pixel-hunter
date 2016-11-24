@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../getElementFromTemplate';
+import getElement from '../getElement';
 import statsResult from '../templates/statsResult';
 import backButton from '../templates/backButton';
 
@@ -109,5 +109,5 @@ const template =
     </div>
   </div>`;
 
-const templateElem = getElementFromTemplate(template);
+const templateElem = getElement(template);
 export default templateElem;

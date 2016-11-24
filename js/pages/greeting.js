@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../getElementFromTemplate';
+import getElement from '../getElement';
 import renderPage from '../renderPage';
 import rules from './rules';
 
@@ -17,7 +17,7 @@ const template =
     <div class="greeting__continue"><span><img src="img/arrow_right.svg" width="64" height="64" alt="Next"></span></div>
   </div>`;
 
-const templateElem = getElementFromTemplate(template);
+const templateElem = getElement(template);
 export default templateElem;
 
 const continueButton = templateElem.querySelector('.greeting__continue');
