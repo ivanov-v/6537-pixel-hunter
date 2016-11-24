@@ -2,18 +2,12 @@ import heart from './heart';
 const MAX_LIVES = 3;
 
 export default (lives = MAX_LIVES) => {
-  let emptyLives = MAX_LIVES - lives;
-  let gameLives = '';
+  const gameLives = [];
 
-  for (let i = 0; i < MAX_LIVES; i++) {
-    if (emptyLives >= 1) {
-      gameLives += `${heart('empty')} `;
-    } else {
-      gameLives += `${heart('full')} `;
-    }
-
-    emptyLives--;
+  for (let i = MAX_LIVES; i > 0; i--) {
+    const live = heart(i - lives > 0 ? 'empty' : 'full');
+    gameLives.push(live);
   }
 
-  return `<div class="game__lives">${gameLives}</div>`;
+  return `<div class="game__lives">${gameLives.join(' ')}</div>`;
 };

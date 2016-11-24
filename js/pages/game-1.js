@@ -7,15 +7,20 @@ import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
 import gameLives from '../templates/gameLives';
 
+const game = {
+  lives: 3,
+  task: 'Угадайте для каждого изображения фото или рисунок?'
+};
+
 const template =
   `<div id="game-1">
     <header class="header">
       ${backButton}
       ${gameTimer()}
-      ${gameLives(3)}
+      ${gameLives(game.lives)}
     </header>
     <div class="game">
-      ${gameTask('Угадайте для каждого изображения фото или рисунок?')}
+      ${gameTask(game.task)}
       <form class="game__content">
         <div class="game__option">
           <img src="http://placehold.it/468x458" alt="Option 1" width="468" height="458">
