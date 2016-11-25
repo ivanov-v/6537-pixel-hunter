@@ -1,6 +1,75 @@
 import getElement from '../getElement';
-import statsResult from '../templates/statsResult';
 import backButton from '../templates/backButton';
+import statsResult from '../templates/statsResult';
+import gameStats from '../templates/gameStats';
+
+const results = {
+  games: [
+    {
+      mainStats: {
+        stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown'],
+        points: 100,
+        total: 900
+      },
+      additionally: [
+        {
+          title: 'Бонус за скорость',
+          extra: {
+            count: 1,
+            result: 'fast'
+          },
+          points: 50,
+          total: 50
+        },
+        {
+          title: 'Бонус за жизни',
+          extra: {
+            count: 2,
+            result: 'heart'
+          },
+          points: 50,
+          total: 100
+        },
+        {
+          title: 'Штраф за медлительность',
+          extra: {
+            count: 2,
+            result: 'slow'
+          },
+          points: 50,
+          total: -100
+        }
+      ],
+      total: 950
+    },
+    {
+      mainStats: {
+        stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown'],
+        points: null,
+        total: 'fail'
+      }
+    },
+    {
+      mainStats: {
+        stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown'],
+        points: 100,
+        total: 900
+      },
+      additionally: [
+        {
+          title: 'Бонус за жизни',
+          extra: {
+            count: 2,
+            result: 'heart'
+          },
+          points: 50,
+          total: 100
+        }
+      ],
+      total: 950
+    }
+  ]
+};
 
 const template =
   `<div id="stats">
