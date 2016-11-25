@@ -1,21 +1,28 @@
 import getElement from '../getElement';
 import renderPage from '../renderPage';
 import game3 from './game-3';
-import statsResult from '../templates/statsResult';
 import backButton from '../templates/backButton';
 import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
 import gameLives from '../templates/gameLives';
+import gameStats from '../templates/gameStats';
+
+const game = {
+  time: 'NN',
+  lives: 2,
+  task: 'Угадайте для каждого изображения фото или рисунок?',
+  stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown']
+};
 
 const template =
   `<div id="game-2">
     <header class="header">
       ${backButton}
-      ${gameTimer()}
-      ${gameLives(2)}
+      ${gameTimer(game.time)}
+      ${gameLives(game.lives)}
     </header>
     <div class="game">
-      ${gameTask('Угадай, фото или рисунок?')}
+      ${gameTask(game.task)}
       <form class="game__content  game__content--wide">
         <div class="game__option">
           <img src="http://placehold.it/705x455" alt="Option 1" width="705" height="455">
@@ -30,18 +37,7 @@ const template =
         </div>
       </form>
       <div class="stats">
-        <ul class="stats">
-          ${statsResult('wrong')}
-          ${statsResult('slow')}
-          ${statsResult('fast')}
-          ${statsResult('correct')}
-          ${statsResult('wrong')}
-          ${statsResult('unknown')}
-          ${statsResult('slow')}
-          ${statsResult('unknown')}
-          ${statsResult('fast')}
-          ${statsResult('unknown')}
-        </ul>
+        ${gameStats(game.stats)}
       </div>
     </div>
   </div>`;

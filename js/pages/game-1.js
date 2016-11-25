@@ -5,7 +5,7 @@ import backButton from '../templates/backButton';
 import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
 import gameLives from '../templates/gameLives';
-import stats from '../templates/stats';
+import gameStats from '../templates/gameStats';
 
 const game = {
   time: 'NN',
@@ -48,7 +48,7 @@ const template =
         </div>
       </form>
       <div class="stats">
-        ${stats(game.stats)}
+        ${gameStats(game.stats)}
       </div>
     </div>
   </div>`;
