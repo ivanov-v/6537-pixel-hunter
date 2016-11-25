@@ -1,22 +1,24 @@
 import getElement from '../getElement';
 import renderPage from '../renderPage';
 import game2 from './game-2';
-import statsResult from '../templates/statsResult';
 import backButton from '../templates/backButton';
 import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
 import gameLives from '../templates/gameLives';
+import stats from '../templates/stats';
 
 const game = {
+  time: 'NN',
   lives: 3,
-  task: 'Угадайте для каждого изображения фото или рисунок?'
+  task: 'Угадайте для каждого изображения фото или рисунок?',
+  stats: ['wrong', 'slow', 'fast', 'correct', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown']
 };
 
 const template =
   `<div id="game-1">
     <header class="header">
       ${backButton}
-      ${gameTimer()}
+      ${gameTimer(game.time)}
       ${gameLives(game.lives)}
     </header>
     <div class="game">
@@ -46,18 +48,7 @@ const template =
         </div>
       </form>
       <div class="stats">
-        <ul class="stats">
-          ${statsResult('wrong')}
-          ${statsResult('slow')}
-          ${statsResult('fast')}
-          ${statsResult('correct')}
-          ${statsResult('unknown')}
-          ${statsResult('unknown')}
-          ${statsResult('unknown')}
-          ${statsResult('unknown')}
-          ${statsResult('unknown')}
-          ${statsResult('unknown')}
-        </ul>
+        ${stats(game.stats)}
       </div>
     </div>
   </div>`;
