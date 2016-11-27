@@ -8,9 +8,41 @@ import gameLives from '../templates/gameLives';
 import gameStats from '../templates/gameStats';
 
 const game = {
-  time: 'NN',
-  lives: 3,
-  task: 'Угадайте для каждого изображения фото или рисунок?',
+  statusbar: {
+    time: 'NN',
+    lives: 3
+  },
+  question: {
+    description: 'Угадайте для каждого изображения фото или рисунок?',
+    options: [
+      {
+        image: 'http://placehold.it/468x458',
+        answers: [
+          {
+            type: 'photo',
+            correct: true
+          },
+          {
+            type: 'paint',
+            correct: false
+          }
+        ]
+      },
+      {
+        image: 'http://placehold.it/468x458',
+        answers: [
+          {
+            type: 'photo',
+            correct: false
+          },
+          {
+            type: 'paint',
+            correct: true
+          }
+        ]
+      }
+    ]
+  },
   stats: ['wrong', 'slow', 'fast', 'correct', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown']
 };
 
@@ -22,7 +54,7 @@ const template =
       ${gameLives(game.lives)}
     </header>
     <div class="game">
-      ${gameTask(game.task)}
+      ${gameTask(game.question.description)}
       <form class="game__content">
         <div class="game__option">
           <img src="http://placehold.it/468x458" alt="Option 1" width="468" height="458">
