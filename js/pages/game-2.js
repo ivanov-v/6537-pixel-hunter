@@ -1,26 +1,22 @@
 import getElement from '../getElement';
 import renderPage from '../renderPage';
 import game3 from './game-3';
-import backButton from '../templates/backButton';
-import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
-import gameLives from '../templates/gameLives';
 import gameStats from '../templates/gameStats';
+import header from '../templates/header';
 
 const game = {
-  time: 'NN',
-  lives: 2,
+  statusbar: {
+    time: 'NN',
+    lives: 2
+  },
   task: 'Угадайте для каждого изображения фото или рисунок?',
   stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown']
 };
 
 const template =
   `<div id="game-2">
-    <header class="header">
-      ${backButton}
-      ${gameTimer(game.time)}
-      ${gameLives(game.lives)}
-    </header>
+    ${header(game.statusbar)}
     <div class="game">
       ${gameTask(game.task)}
       <form class="game__content  game__content--wide">

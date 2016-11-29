@@ -1,11 +1,9 @@
 import getElement from '../getElement';
 import renderPage from '../renderPage';
 import game2 from './game-2';
-import backButton from '../templates/backButton';
-import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
-import gameLives from '../templates/gameLives';
 import gameStats from '../templates/gameStats';
+import header from '../templates/header';
 
 const game = {
   statusbar: {
@@ -48,11 +46,7 @@ const game = {
 
 const template =
   `<div id="game-1">
-    <header class="header">
-      ${backButton}
-      ${gameTimer(game.time)}
-      ${gameLives(game.lives)}
-    </header>
+    ${header(game.statusbar)}
     <div class="game">
       ${gameTask(game.question.description)}
       <form class="game__content">
