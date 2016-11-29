@@ -1,26 +1,22 @@
 import getElement from '../getElement';
-import backButton from '../templates/backButton';
 import renderPage from '../renderPage';
-import gameTimer from '../templates/gameTimer';
 import gameTask from '../templates/gameTask';
-import gameLives from '../templates/gameLives';
 import stats from './stats';
 import gameStats from '../templates/gameStats';
+import header from '../templates/header';
 
 const game = {
-  time: 'NN',
-  lives: 1,
+  statusbar: {
+    time: 'NN',
+    lives: 1
+  },
   task: 'Найдите рисунок среди изображений',
   stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown']
 };
 
 const template =
   `<div id="game-3">
-    <header class="header">
-      ${backButton}
-      ${gameTimer(game.time)}
-      ${gameLives(game.lives)}
-    </header>
+    ${header(game.statusbar)}
     <div class="game">
       ${gameTask(game.task)}
       <form class="game__content  game__content--triple">
