@@ -10,7 +10,7 @@ const game = {
     time: 'NN',
     lives: 2
   },
-  task: 'Угадайте для каждого изображения фото или рисунок?',
+  task: 'Угадайте, фото или рисунок?',
   stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown']
 };
 
