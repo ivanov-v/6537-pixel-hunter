@@ -9,7 +9,7 @@ const settingsVariants = [
     }
   },
   {
-    contentType: null,
+    contentType: '',
     imageSizes: {
       width: 468,
       height: 458
@@ -25,22 +25,22 @@ const settingsVariants = [
 ];
 
 const getSettings = (settings, optionsLength) => {
-  switch (optionsLength) {
-    case 1:
-      return settings[0];
-    case 2:
-      return settings[1];
-    case 3:
-      return settings[2];
-    default:
-      return settings[1];
-  }
+  // switch (optionsLength) {
+  //   case 1:
+  //     return settings[0];
+  //   case 2:
+  //     return settings[1];
+  //   case 3:
+  //     return settings[2];
+  //   default:
+  //     return settings[1];
+  // }
 };
 
 export default (options) => {
   const selectedSetings = getSettings(settingsVariants, options.length);
 
-  const {contentType: contentType, imageSizes: {width, height}} = selectedSetings;
+  const {contentType, imageSizes: {width, height}} = selectedSetings;
 
   const optionsTemplate = options.map((option, index) => {
     return `

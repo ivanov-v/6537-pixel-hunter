@@ -4,10 +4,10 @@ import game2 from './game-2';
 import gameTask from '../templates/gameTask';
 import gameStats from '../templates/gameStats';
 import header from '../templates/header';
-// import gameAnswers from '../templates/gameAnswers';
 import gameContent from '../templates/gameContent';
 
 const game = {
+  type: 'answers-2',
   statusbar: {
     time: 'NN',
     lives: 3

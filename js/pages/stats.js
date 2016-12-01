@@ -11,7 +11,7 @@ const results = {
         points: 100,
         total: 900
       },
-      additionally: [
+      details: [
         {
           title: 'Бонус за скорость',
           extra: {
@@ -45,7 +45,6 @@ const results = {
     {
       mainStats: {
         stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown'],
-        points: null,
         total: 'fail'
       }
     },
@@ -55,7 +54,7 @@ const results = {
         points: 100,
         total: 900
       },
-      additionally: [
+      details: [
         {
           title: 'Бонус за жизни',
           extra: {
