@@ -5,6 +5,7 @@ import gameTask from '../templates/gameTask';
 import gameStats from '../templates/gameStats';
 import header from '../templates/header';
 // import gameAnswers from '../templates/gameAnswers';
+import gameContent from '../templates/gameContent';
 
 const game = {
   statusbar: {
@@ -50,30 +51,7 @@ const template =
     ${header(game.statusbar)}
     <div class="game">
       ${gameTask(game.question.description)}
-      <form class="game__content">
-        <div class="game__option">
-          <img src="http://placehold.it/468x458" alt="Option 1" width="468" height="458">
-          <label class="game__answer game__answer--photo">
-            <input name="question1" type="radio" value="photo">
-            <span>Фото</span>
-          </label>
-          <label class="game__answer game__answer--paint">
-            <input name="question1" type="radio" value="paint">
-            <span>Рисунок</span>
-          </label>
-        </div>
-        <div class="game__option">
-          <img src="http://placehold.it/468x458" alt="Option 2" width="468" height="458">
-          <label class="game__answer  game__answer--photo">
-            <input name="question2" type="radio" value="photo">
-            <span>Фото</span>
-          </label>
-          <label class="game__answer  game__answer--paint">
-            <input name="question2" type="radio" value="paint">
-            <span>Рисунок</span>
-          </label>
-        </div>
-      </form>
+      ${gameContent(game.question.options)}
       <div class="stats">
         ${gameStats(game.stats)}
       </div>
