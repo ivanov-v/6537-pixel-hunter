@@ -1,55 +1,48 @@
 import gameAnswers from '../templates/gameAnswers';
 
-const settingsVariants = [
-  {
-    contentType: 'wide',
+const settingsVariants = {
+  'answers-1': {
+    contentMod: 'wide',
     imageSizes: {
       width: 705,
       height: 455
     }
   },
-  {
-    contentType: '',
+  'answers-2': {
+    contentMod: '',
     imageSizes: {
       width: 468,
       height: 458
     }
   },
-  {
-    contentType: 'triple',
+  'answers-3': {
+    contentMod: 'triple',
     imageSizes: {
       width: 304,
       height: 455
     }
   }
-];
-
-const getSettings = (settings, optionsLength) => {
-  // switch (optionsLength) {
-  //   case 1:
-  //     return settings[0];
-  //   case 2:
-  //     return settings[1];
-  //   case 3:
-  //     return settings[2];
-  //   default:
-  //     return settings[1];
-  // }
 };
 
-export default (options) => {
-  const selectedSetings = getSettings(settingsVariants, options.length);
+const getSettings = (settings, gameType) => {
+  return JSON.parse(JSON.stringify(settings))[gameType];
+};
 
-  const {contentType, imageSizes: {width, height}} = selectedSetings;
+window.getSettings = getSettings;
 
-  const optionsTemplate = options.map((option, index) => {
+export default (game) => {
+  const selectedSetings = getSettings(settingsVariants, game.type);
+
+  const {contentMod, imageSizes: {width, height}} = selectedSetings;
+
+  const optionsTemplate = game.question.options.map((option, index) => {
     return `
       <div class="game__option">
         <img src="${option.image}" alt="Option ${index + 1}" width="${width}" height="${height}">
         ${option.answers ? gameAnswers(option.answers) : ''}
       </div>
     `;
-  });
+  }).join('');
 
-  return `<form class="game__content ${contentType ? `game__content--${contentType}` : ''}">${optionsTemplate.join('')}</form>`;
+  return `<form class="game__content ${contentMod ? `game__content--${contentMod}` : ''}">${optionsTemplate}</form>`;
 };

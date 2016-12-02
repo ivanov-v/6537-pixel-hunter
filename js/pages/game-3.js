@@ -4,32 +4,17 @@ import gameTask from '../templates/gameTask';
 import stats from './stats';
 import gameStats from '../templates/gameStats';
 import header from '../templates/header';
+import gameContent from '../templates/gameContent';
+import {levels, levelsNames} from '../data/game-data';
 
-const game = {
-  statusbar: {
-    time: 'NN',
-    lives: 1
-  },
-  task: 'Найдите рисунок среди изображений',
-  stats: ['wrong', 'slow', 'fast', 'correct', 'wrong', 'unknown', 'slow', 'unknown', 'fast', 'unknown']
-};
+const game = levels[levelsNames.GAME3];
 
 const template =
-  `<div id="game-3">
+  `<div>
     ${header(game.statusbar)}
     <div class="game">
-      ${gameTask(game.task)}
-      <form class="game__content  game__content--triple">
-        <div class="game__option">
-          <img src="http://placehold.it/304x455" alt="Option 1" width="304" height="455">
-        </div>
-        <div class="game__option  game__option--selected">
-          <img src="http://placehold.it/304x455" alt="Option 1" width="304" height="455">
-        </div>
-        <div class="game__option">
-          <img src="http://placehold.it/304x455" alt="Option 1" width="304" height="455">
-        </div>
-      </form>
+      ${gameTask(game.question.description)}
+      ${gameContent(game)}
       <div class="stats">
         ${gameStats(game.stats)}
       </div>
