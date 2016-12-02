@@ -5,53 +5,16 @@ import gameTask from '../templates/gameTask';
 import gameStats from '../templates/gameStats';
 import header from '../templates/header';
 import gameContent from '../templates/gameContent';
+import {levels, levelsNames} from '../data/game-data';
 
-const game = {
-  type: 'answers-2',
-  statusbar: {
-    time: 'NN',
-    lives: 3
-  },
-  question: {
-    description: 'Угадайте для каждого изображения фото или рисунок?',
-    options: [
-      {
-        image: 'http://placehold.it/468x458',
-        answers: [
-          {
-            type: 'photo',
-            correct: true
-          },
-          {
-            type: 'paint',
-            correct: false
-          }
-        ]
-      },
-      {
-        image: 'http://placehold.it/468x458',
-        answers: [
-          {
-            type: 'photo',
-            correct: false
-          },
-          {
-            type: 'paint',
-            correct: true
-          }
-        ]
-      }
-    ]
-  },
-  stats: ['wrong', 'slow', 'fast', 'correct', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown']
-};
+const game = levels[levelsNames.GAME1];
 
 const template =
-  `<div id="game-1">
+  `<div>
     ${header(game.statusbar)}
     <div class="game">
       ${gameTask(game.question.description)}
-      ${gameContent(game.question.options)}
+      ${gameContent(game)}
       <div class="stats">
         ${gameStats(game.stats)}
       </div>
