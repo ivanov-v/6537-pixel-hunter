@@ -1,79 +1,81 @@
 import getElement from '../getElement';
-import backButton from '../templates/backButton';
+import header from '../templates/header';
 import statsResult from '../templates/statsResult';
 import gameStats from '../templates/gameStats';
 import {stats} from '../data/game-data';
 
-const results = [
-  {
-    mainStats: {
-      stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
-      points: 100,
-      total: 900
+const result = {
+  verdict: 'Победа!',
+  levels: [
+    {
+      mainStats: {
+        stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
+        points: 100,
+        total: 900
+      },
+      details: [
+        {
+          title: 'Бонус за скорость',
+          extra: {
+            count: 1,
+            result: stats.FAST
+          },
+          points: 50,
+          total: 50
+        },
+        {
+          title: 'Бонус за жизни',
+          extra: {
+            count: 2,
+            result: 'heart'
+          },
+          points: 50,
+          total: 100
+        },
+        {
+          title: 'Штраф за медлительность',
+          extra: {
+            count: 2,
+            result: stats.SLOW
+          },
+          points: 50,
+          total: -100
+        }
+      ],
+      total: 950
     },
-    details: [
-      {
-        title: 'Бонус за скорость',
-        extra: {
-          count: 1,
-          result: stats.FAST
-        },
-        points: 50,
-        total: 50
-      },
-      {
-        title: 'Бонус за жизни',
-        extra: {
-          count: 2,
-          result: 'heart'
-        },
-        points: 50,
-        total: 100
-      },
-      {
-        title: 'Штраф за медлительность',
-        extra: {
-          count: 2,
-          result: stats.SLOW
-        },
-        points: 50,
-        total: -100
+    {
+      mainStats: {
+        stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
+        total: 'fail'
       }
-    ],
-    total: 950
-  },
-  {
-    mainStats: {
-      stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
-      total: 'fail'
+    },
+    {
+      mainStats: {
+        stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
+        points: 100,
+        total: 900
+      },
+      details: [
+        {
+          title: 'Бонус за жизни',
+          extra: {
+            count: 2,
+            result: 'heart'
+          },
+          points: 50,
+          total: 100
+        }
+      ],
+      total: 950
     }
-  },
-  {
-    mainStats: {
-      stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
-      points: 100,
-      total: 900
-    },
-    details: [
-      {
-        title: 'Бонус за жизни',
-        extra: {
-          count: 2,
-          result: 'heart'
-        },
-        points: 50,
-        total: 100
-      }
-    ],
-    total: 950
-  }
-];
+  ]
+};
+
 
 const template =
-  `<div id="stats">
-    <header class="header">
-      ${backButton}
-    </header>
+  `<div>
+    ${header()}
     <div class="result">
       <h1>Победа!</h1>
       <table class="result__table">
