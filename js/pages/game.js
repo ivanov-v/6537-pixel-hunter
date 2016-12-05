@@ -5,7 +5,7 @@ import gameStats from '../templates/gameStats';
 import gameContent from '../templates/gameContent';
 
 export default (data) => {
-  const gameTemplate =
+  const template =
     `<div>
       ${header(data.statusbar)}
       <div class="game">
@@ -17,5 +17,5 @@ export default (data) => {
       </div>
     </div>`;
 
-  return getElement(gameTemplate);
+  return getElement(template);
 };
