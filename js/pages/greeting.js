@@ -2,27 +2,6 @@ import getElement from '../getElement';
 import renderPage from '../renderPage';
 import rules from './rules';
 
-// const greeting = {
-//   title: 'Лучшие художники-фотореалисты бросают&nbsp;тебе&nbsp;вызов!',
-//   description: `Правила игры просты.<br>
-//     Нужно отличить рисунок&nbsp;от фотографии и сделать выбор.<br>
-//     Задача кажется тривиальной, но не думай, что все так просто.<br>
-//     Фотореализм обманчив и коварен.<br>
-//     Помни, главное — смотреть очень внимательно.`
-// };
-//
-//
-//
-// const templateElem = getElement(template);
-// export default templateElem;
-//
-// const continueButton = templateElem.querySelector('.greeting__continue');
-//
-// const continueHandler = (evt) => renderPage(rules);
-//
-// continueButton.addEventListener('click', continueHandler);
-
-
 export default (data) => {
   const template =
     `<div class="greeting  central--blur">
