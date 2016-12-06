@@ -2,6 +2,7 @@ import getElement from '../getElement';
 import header from '../templates/header';
 import statsResult from '../templates/statsResult';
 import gameStats from '../templates/gameStats';
+import resultTable from '../templates/resultTable';
 import {stats} from '../data/game-data';
 
 const result = {
@@ -72,9 +73,18 @@ const result = {
   ]
 };
 
+console.log(result.levels[0]);
 
 const template =
   `<div>
+    <br>
+    <br>
+    <br>
+    ${resultTable(1, result.levels[0])}
+    <br>
+    <br>
+    <br>
+
     ${header()}
     <div class="result">
       <h1>Победа!</h1>
@@ -82,9 +92,9 @@ const template =
         <tr>
           <td class="result__number">1.</td>
           <td colspan="2">
-            ${gameStats(results[0].mainStats.stats)}
+            ${gameStats(result.levels[0].mainStats.stats)}
           </td>
-          <td class="result__points">×&nbsp;${results[0].mainStats.points}</td>
+          <td class="result__points">×&nbsp;100</td>
           <td class="result__total">900</td>
         </tr>
         <tr>
