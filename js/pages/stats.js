@@ -9,8 +9,8 @@ const result = {
   verdict: 'Победа!',
   levels: [
     {
-      passed: true,
       mainStats: {
+        passed: true,
         stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
         points: 100,
         total: 900
@@ -47,15 +47,15 @@ const result = {
       final: 950
     },
     {
-      passed: false,
       mainStats: {
+        passed: false,
         stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
         total: 'fail'
       }
     },
     {
-      passed: true,
       mainStats: {
+        passed: true,
         stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
         points: 100,
         total: 900
