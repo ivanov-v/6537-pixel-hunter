@@ -1,9 +1,10 @@
-export const stats = {
+export const Stats = {
   WRONG: 'wrong',
   SLOW: 'slow',
   FAST: 'fast',
   CORRECT: 'correct',
-  UNKNOWN: 'unknown'
+  UNKNOWN: 'unknown',
+  HEART: 'heart'
 };
 
 export const levelsNames = {
@@ -50,7 +51,7 @@ export const levels = [
         }
       ]
     },
-    stats: [stats.WRONG, stats.CORRECT, stats.FAST, stats.CORRECT, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN]
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
     type: 'answers-1',
@@ -76,7 +77,7 @@ export const levels = [
         }
       ]
     },
-    stats: [stats.WRONG, stats.CORRECT, stats.FAST, stats.CORRECT, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN]
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
     type: 'answers-3',
@@ -101,6 +102,6 @@ export const levels = [
         }
       ]
     },
-    stats: [stats.WRONG, stats.CORRECT, stats.FAST, stats.CORRECT, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN, stats.UNKNOWN]
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   }
 ];
