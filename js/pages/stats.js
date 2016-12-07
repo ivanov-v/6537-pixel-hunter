@@ -9,6 +9,7 @@ const result = {
   verdict: 'Победа!',
   levels: [
     {
+      passed: true,
       mainStats: {
         stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
         points: 100,
@@ -46,12 +47,14 @@ const result = {
       final: 950
     },
     {
+      passed: false,
       mainStats: {
         stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
         total: 'fail'
       }
     },
     {
+      passed: true,
       mainStats: {
         stats: [stats.CORRECT, stats.SLOW, stats.FAST, stats.CORRECT, stats.WRONG, stats.UNKNOWN, stats.SLOW, stats.SLOW, stats.FAST, stats.UNKNOWN],
         points: 100,
@@ -78,7 +81,7 @@ const template =
     <br>
     <br>
     <br>
-    ${resultTable(1, result.levels[0])}
+    ${resultTable(1, result.levels[1])}
     <br>
     <br>
     <br>
