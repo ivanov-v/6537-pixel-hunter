@@ -43,7 +43,7 @@ const result = {
           total: -100
         }
       ],
-      total: 950
+      final: 950
     },
     {
       mainStats: {
@@ -68,12 +68,10 @@ const result = {
           total: 100
         }
       ],
-      total: 950
+      final: 950
     }
   ]
 };
-
-console.log(result.levels[0]);
 
 const template =
   `<div>
