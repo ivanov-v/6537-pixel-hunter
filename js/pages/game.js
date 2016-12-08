@@ -1,19 +1,35 @@
-import getElement from '../getElement';
-import header from '../templates/header';
-import gameStats from '../templates/gameStats';
-import gameContent from '../templates/gameContent';
+import renderPage from '../renderPage';
+import level from './level';
+import {levels, LevelType} from '../data/game-data';
 
-export default (data) => {
-  const template =
-    `<div>
-      ${header(data.statusbar)}
-      <div class="game">
-        ${gameContent(data)}
-        <div class="stats">
-          ${gameStats(data.stats)}
-        </div>
-      </div>
-    </div>`;
+let currentPage = 0;
 
-  return getElement(template);
+const getLevelElement = (levelData) => {
+  const levelElement = level(levelData);
+  let answers;
+
+  if (levelData.type === LevelType.ANSWERS_3) {
+    answers = levelElement.querySelectorAll('.game__option');
+  } else {
+    answers = levelElement.querySelectorAll('.game__answer');
+  }
+
+  console.log(levelData.type);
+
+  [].forEach.call(answers, (answer) => {
+    answer.addEventListener('click', () => {
+      currentPage++;
+      if (currentPage > levels.length) {
+        renderPage(stats);
+      }
+      renderPage(getLevelElement(levels[currentPage]));
+    });
+  });
+
+  return levelElement;
+};
+
+export default () => {
+  currentPage = 0;
+  return getLevelElement(levels[currentPage]);
 };
