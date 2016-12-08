@@ -7,15 +7,15 @@ export const Stats = {
   HEART: 'heart'
 };
 
-export const levelsNames = {
-  GAME1: 0,
-  GAME2: 1,
-  GAME3: 2
+export const LevelType = {
+  ANSWERS_1: 'answers-1',
+  ANSWERS_2: 'answers-2',
+  ANSWERS_3: 'answers-3'
 };
 
 export const levels = [
   {
-    type: 'answers-2',
+    type: LevelType.ANSWERS_2,
     statusbar: {
       time: 'NN',
       lives: 3
@@ -54,7 +54,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-1',
+    type: LevelType.ANSWERS_1,
     statusbar: {
       time: 'NN',
       lives: 3
@@ -80,7 +80,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-3',
+    type: LevelType.ANSWERS_3,
     statusbar: {
       time: 'NN',
       lives: 3
@@ -105,7 +105,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-3',
+    type: LevelType.ANSWERS_3,
     statusbar: {
       time: 'NN',
       lives: 2
@@ -130,7 +130,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-2',
+    type: LevelType.ANSWERS_2,
     statusbar: {
       time: 'NN',
       lives: 2
@@ -169,7 +169,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-2',
+    type: LevelType.ANSWERS_2,
     statusbar: {
       time: 'NN',
       lives: 2
@@ -208,7 +208,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-2',
+    type: LevelType.ANSWERS_2,
     statusbar: {
       time: 'NN',
       lives: 1
@@ -247,7 +247,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-2',
+    type: LevelType.ANSWERS_2,
     statusbar: {
       time: 'NN',
       lives: 1
@@ -286,7 +286,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-2',
+    type: LevelType.ANSWERS_2,
     statusbar: {
       time: 'NN',
       lives: 1
@@ -325,7 +325,7 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: 'answers-2',
+    type: LevelType.ANSWERS_2,
     statusbar: {
       time: 'NN',
       lives: 1

@@ -1,7 +1,7 @@
 import getElement from '../getElement';
 import renderPage from '../renderPage';
 import header from '../templates/header';
-import game1 from './game-1';
+import game from './game';
 
 export default (data) => {
   const template =
@@ -32,7 +32,7 @@ export default (data) => {
 
   const formHandler = (evt) => {
     evt.preventDefault();
-    renderPage(game1);
+    renderPage(game);
   };
 
   form.addEventListener('submit', formHandler);
