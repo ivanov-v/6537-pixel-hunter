@@ -57,7 +57,7 @@ export const levels = [
     type: 'answers-1',
     statusbar: {
       time: 'NN',
-      lives: 2
+      lives: 3
     },
     question: {
       description: 'Угадайте, фото или рисунок?',
@@ -83,7 +83,7 @@ export const levels = [
     type: 'answers-3',
     statusbar: {
       time: 'NN',
-      lives: 1
+      lives: 3
     },
     question: {
       description: 'Найдите рисунок среди изображений',
@@ -99,6 +99,265 @@ export const levels = [
         {
           image: 'http://placehold.it/304x455',
           correct: false
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: 'answers-3',
+    statusbar: {
+      time: 'NN',
+      lives: 2
+    },
+    question: {
+      description: 'Найдите рисунок среди изображений',
+      options: [
+        {
+          image: 'http://placehold.it/304x455',
+          correct: false
+        },
+        {
+          image: 'http://placehold.it/304x455',
+          correct: true
+        },
+        {
+          image: 'http://placehold.it/304x455',
+          correct: false
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: 'answers-2',
+    statusbar: {
+      time: 'NN',
+      lives: 2
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: true
+            },
+            {
+              type: 'paint',
+              correct: false
+            }
+          ]
+        },
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: 'answers-2',
+    statusbar: {
+      time: 'NN',
+      lives: 2
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        },
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: 'answers-2',
+    statusbar: {
+      time: 'NN',
+      lives: 1
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        },
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: 'answers-2',
+    statusbar: {
+      time: 'NN',
+      lives: 1
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        },
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: 'answers-2',
+    statusbar: {
+      time: 'NN',
+      lives: 1
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        },
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: 'answers-2',
+    statusbar: {
+      time: 'NN',
+      lives: 1
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        },
+        {
+          image: 'http://placehold.it/468x458',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
         }
       ]
     },
