@@ -28,8 +28,6 @@ const getSettings = (settings, gameType) => {
   return JSON.parse(JSON.stringify(settings))[gameType];
 };
 
-window.getSettings = getSettings;
-
 export default (game) => {
   const selectedSetings = getSettings(settingsVariants, game.type);
 
@@ -44,5 +42,8 @@ export default (game) => {
     `;
   }).join('');
 
-  return `<form class="game__content ${contentMod ? `game__content--${contentMod}` : ''}">${optionsTemplate}</form>`;
+  return `<p class="game__task">${game.question.description}</p>
+          <form class="game__content ${contentMod ? `game__content--${contentMod}` : ''}">
+            ${optionsTemplate}
+          </form>`;
 };
