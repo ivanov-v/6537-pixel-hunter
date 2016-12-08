@@ -44,7 +44,7 @@ const inputHandler = (evt) => {
 
 const formHandler = (evt) => {
   evt.preventDefault();
-  // renderPage(game());
+  renderPage(game());
 };
 
 form.addEventListener('submit', formHandler);

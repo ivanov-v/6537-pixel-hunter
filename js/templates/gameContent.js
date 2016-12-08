@@ -37,7 +37,7 @@ export default (game) => {
     return `
       <div class="game__option">
         <img src="${option.image}" alt="Option ${index + 1}" width="${width}" height="${height}">
-        ${option.answers ? gameAnswers(option.answers) : ''}
+        ${option.answers ? gameAnswers(option.answers, index + 1) : ''}
       </div>
     `;
   }).join('');
