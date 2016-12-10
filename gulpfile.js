@@ -1,5 +1,6 @@
 'use strict';
 
+require('babel-register');
 const del = require('del');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
@@ -15,7 +16,6 @@ const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('gulp-webpack');
 const mocha = require('gulp-mocha');
-require('babel-register');
 
 gulp.task('test', function () {
   return gulp
@@ -72,9 +72,6 @@ gulp.task('scripts', function () {
       }
     }))
     .pipe(gulp.dest('build/js/'));
-});
-
-gulp.task('test', function () {
 });
 
 gulp.task('imagemin', ['copy'], function () {
