@@ -1,35 +1,39 @@
 import renderPage from '../renderPage';
 import level from './level';
-import {levels, LevelType} from '../data/game-data';
+import stats from './stats';
+import {levels} from '../data/game-data';
+import result from '../data/result';
 
 let currentPage = 0;
 
-const getLevelElement = (levelData) => {
-  const levelElement = level(levelData);
-  let answers;
+const renderedLevels = levels.map((levelData) => {
+  return level(levelData);
+});
 
-  if (levelData.type === LevelType.ANSWERS_3) {
-    answers = levelElement.querySelectorAll('.game__option');
-  } else {
-    answers = levelElement.querySelectorAll('.game__answer');
+const changeLevel = () => {
+  if (currentPage + 1 >= renderedLevels.length) {
+    renderPage(stats(result));
+    return;
   }
 
-  console.log(levelData.type);
-
-  [].forEach.call(answers, (answer) => {
-    answer.addEventListener('click', () => {
-      currentPage++;
-      if (currentPage > levels.length) {
-        renderPage(stats);
-      }
-      renderPage(getLevelElement(levels[currentPage]));
-    });
-  });
-
-  return levelElement;
+  currentPage++;
+  renderPage(renderedLevels[currentPage]);
 };
 
+renderedLevels.forEach((renderedlevel) => {
+  if (renderedlevel.querySelector('.game__content--triple')) {
+    const answer = renderedlevel.querySelector('.game__option');
+    answer.addEventListener('click', () => {
+      changeLevel();
+    });
+  } else {
+    const answer = renderedlevel.querySelector('.game__answer');
+    answer.addEventListener('click', () => {
+      changeLevel();
+    });
+  }
+});
+
 export default () => {
-  currentPage = 0;
-  return getLevelElement(levels[currentPage]);
+  return renderedLevels[0];
 };
