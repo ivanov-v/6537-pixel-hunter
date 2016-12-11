@@ -24,7 +24,20 @@ export const levels = [
       description: 'Угадайте для каждого изображения фото или рисунок?',
       options: [
         {
-          image: 'http://placehold.it/468x458',
+          image: '/img/answer11.jpg',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        },
+        {
+          image: '/img/answer12.jpg',
           answers: [
             {
               type: 'photo',
@@ -35,9 +48,137 @@ export const levels = [
               correct: false
             }
           ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: LevelType.ANSWERS_1,
+    statusbar: {
+      time: 'NN',
+      lives: 3
+    },
+    question: {
+      description: 'Угадайте, фото или рисунок?',
+      options: [
+        {
+          image: '/img/answer21.jpg',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: LevelType.ANSWERS_3,
+    statusbar: {
+      time: 'NN',
+      lives: 3
+    },
+    question: {
+      description: 'Найдите рисунок среди изображений',
+      options: [
+        {
+          image: '/img/answer31.jpg',
+          correct: true
         },
         {
-          image: 'http://placehold.it/468x458',
+          image: '/img/answer32.jpg',
+          correct: false
+        },
+        {
+          image: '/img/answer33.jpg',
+          correct: false
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: LevelType.ANSWERS_3,
+    statusbar: {
+      time: 'NN',
+      lives: 2
+    },
+    question: {
+      description: 'Найдите рисунок среди изображений',
+      options: [
+        {
+          image: '/img/answer41.jpg',
+          correct: false
+        },
+        {
+          image: '/img/answer42.jpg',
+          correct: true
+        },
+        {
+          image: '/img/answer43.jpg',
+          correct: false
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: LevelType.ANSWERS_2,
+    statusbar: {
+      time: 'NN',
+      lives: 2
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: '/img/answer51.jpg',
+          answers: [
+            {
+              type: 'photo',
+              correct: false
+            },
+            {
+              type: 'paint',
+              correct: true
+            }
+          ]
+        },
+        {
+          image: '/img/answer52.jpg',
+          answers: [
+            {
+              type: 'photo',
+              correct: true
+            },
+            {
+              type: 'paint',
+              correct: false
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: LevelType.ANSWERS_1,
+    statusbar: {
+      time: 'NN',
+      lives: 3
+    },
+    question: {
+      description: 'Угадайте, фото или рисунок?',
+      options: [
+        {
+          image: '/img/answer61.jpg',
           answers: [
             {
               type: 'photo',
@@ -63,15 +204,15 @@ export const levels = [
       description: 'Угадайте, фото или рисунок?',
       options: [
         {
-          image: 'http://placehold.it/705x455',
+          image: '/img/answer71.jpg',
           answers: [
             {
               type: 'photo',
-              correct: true
+              correct: false
             },
             {
               type: 'paint',
-              correct: false
+              correct: true
             }
           ]
         }
@@ -80,66 +221,16 @@ export const levels = [
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
   {
-    type: LevelType.ANSWERS_3,
+    type: LevelType.ANSWERS_1,
     statusbar: {
       time: 'NN',
       lives: 3
     },
     question: {
-      description: 'Найдите рисунок среди изображений',
+      description: 'Угадайте, фото или рисунок?',
       options: [
         {
-          image: 'http://placehold.it/304x455',
-          correct: true
-        },
-        {
-          image: 'http://placehold.it/304x455',
-          correct: false
-        },
-        {
-          image: 'http://placehold.it/304x455',
-          correct: false
-        }
-      ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
-  },
-  {
-    type: LevelType.ANSWERS_3,
-    statusbar: {
-      time: 'NN',
-      lives: 2
-    },
-    question: {
-      description: 'Найдите рисунок среди изображений',
-      options: [
-        {
-          image: 'http://placehold.it/304x455',
-          correct: false
-        },
-        {
-          image: 'http://placehold.it/304x455',
-          correct: true
-        },
-        {
-          image: 'http://placehold.it/304x455',
-          correct: false
-        }
-      ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
-  },
-  {
-    type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 2
-    },
-    question: {
-      description: 'Угадайте для каждого изображения фото или рисунок?',
-      options: [
-        {
-          image: 'http://placehold.it/468x458',
+          image: '/img/answer81.jpg',
           answers: [
             {
               type: 'photo',
@@ -148,19 +239,6 @@ export const levels = [
             {
               type: 'paint',
               correct: false
-            }
-          ]
-        },
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
             }
           ]
         }
@@ -178,7 +256,7 @@ export const levels = [
       description: 'Угадайте для каждого изображения фото или рисунок?',
       options: [
         {
-          image: 'http://placehold.it/468x458',
+          image: '/img/answer91.jpg',
           answers: [
             {
               type: 'photo',
@@ -191,7 +269,46 @@ export const levels = [
           ]
         },
         {
-          image: 'http://placehold.it/468x458',
+          image: '/img/answer92.jpg',
+          answers: [
+            {
+              type: 'photo',
+              correct: true
+            },
+            {
+              type: 'paint',
+              correct: false
+            }
+          ]
+        }
+      ]
+    },
+    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+  },
+  {
+    type: LevelType.ANSWERS_2,
+    statusbar: {
+      time: 'NN',
+      lives: 2
+    },
+    question: {
+      description: 'Угадайте для каждого изображения фото или рисунок?',
+      options: [
+        {
+          image: '/img/answer101.jpg',
+          answers: [
+            {
+              type: 'photo',
+              correct: true
+            },
+            {
+              type: 'paint',
+              correct: false
+            }
+          ]
+        },
+        {
+          image: '/img/answer102.jpg',
           answers: [
             {
               type: 'photo',
@@ -207,160 +324,4 @@ export const levels = [
     },
     stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
   },
-  {
-    type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 1
-    },
-    question: {
-      description: 'Угадайте для каждого изображения фото или рисунок?',
-      options: [
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        },
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        }
-      ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
-  },
-  {
-    type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 1
-    },
-    question: {
-      description: 'Угадайте для каждого изображения фото или рисунок?',
-      options: [
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        },
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        }
-      ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
-  },
-  {
-    type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 1
-    },
-    question: {
-      description: 'Угадайте для каждого изображения фото или рисунок?',
-      options: [
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        },
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        }
-      ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
-  },
-  {
-    type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 1
-    },
-    question: {
-      description: 'Угадайте для каждого изображения фото или рисунок?',
-      options: [
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        },
-        {
-          image: 'http://placehold.it/468x458',
-          answers: [
-            {
-              type: 'photo',
-              correct: false
-            },
-            {
-              type: 'paint',
-              correct: true
-            }
-          ]
-        }
-      ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
-  }
 ];

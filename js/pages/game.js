@@ -6,9 +6,7 @@ import result from '../data/result';
 
 let currentPage = 0;
 
-const renderedLevels = levels.map((levelData) => {
-  return level(levelData);
-});
+const renderedLevels = levels.map((levelData) => level(levelData));
 
 const changeLevel = () => {
   if (currentPage + 1 >= renderedLevels.length) {
@@ -27,8 +25,8 @@ renderedLevels.forEach((renderedlevel) => {
       changeLevel();
     });
   } else {
-    const answer = renderedlevel.querySelector('.game__answer');
-    answer.addEventListener('click', () => {
+    const answer = renderedlevel.querySelector('input');
+    answer.addEventListener('change', () => {
       changeLevel();
     });
   }
