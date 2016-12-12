@@ -1,6 +1,6 @@
 export const initialState = {
   level: 0,
-  time: 0,
+  time: 30,
   lives: 3
 };
 

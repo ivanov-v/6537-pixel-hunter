@@ -46,8 +46,7 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_1,
@@ -68,8 +67,7 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_3,
@@ -89,8 +87,7 @@ export const levels = [
           correct: false
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_3,
@@ -110,8 +107,7 @@ export const levels = [
           correct: false
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_2,
@@ -145,8 +141,7 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_1,
@@ -167,8 +162,7 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_1,
@@ -189,8 +183,7 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_1,
@@ -211,8 +204,7 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_2,
@@ -246,8 +238,7 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
+    }
   },
   {
     type: LevelType.ANSWERS_2,
@@ -281,7 +272,6 @@ export const levels = [
           ]
         }
       ]
-    },
-    stats: [Stats.WRONG, Stats.CORRECT, Stats.FAST, Stats.CORRECT, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN, Stats.UNKNOWN]
-  },
+    }
+  }
 ];
