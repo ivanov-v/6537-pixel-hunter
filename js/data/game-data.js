@@ -16,10 +16,6 @@ export const LevelType = {
 export const levels = [
   {
     type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 3
-    },
     question: {
       description: 'Угадайте для каждого изображения фото или рисунок?',
       options: [
@@ -55,10 +51,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_1,
-    statusbar: {
-      time: 'NN',
-      lives: 3
-    },
     question: {
       description: 'Угадайте, фото или рисунок?',
       options: [
@@ -81,10 +73,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_3,
-    statusbar: {
-      time: 'NN',
-      lives: 3
-    },
     question: {
       description: 'Найдите рисунок среди изображений',
       options: [
@@ -106,10 +94,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_3,
-    statusbar: {
-      time: 'NN',
-      lives: 2
-    },
     question: {
       description: 'Найдите рисунок среди изображений',
       options: [
@@ -131,10 +115,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 2
-    },
     question: {
       description: 'Угадайте для каждого изображения фото или рисунок?',
       options: [
@@ -170,10 +150,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_1,
-    statusbar: {
-      time: 'NN',
-      lives: 3
-    },
     question: {
       description: 'Угадайте, фото или рисунок?',
       options: [
@@ -196,10 +172,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_1,
-    statusbar: {
-      time: 'NN',
-      lives: 3
-    },
     question: {
       description: 'Угадайте, фото или рисунок?',
       options: [
@@ -222,10 +194,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_1,
-    statusbar: {
-      time: 'NN',
-      lives: 3
-    },
     question: {
       description: 'Угадайте, фото или рисунок?',
       options: [
@@ -248,10 +216,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 2
-    },
     question: {
       description: 'Угадайте для каждого изображения фото или рисунок?',
       options: [
@@ -287,10 +251,6 @@ export const levels = [
   },
   {
     type: LevelType.ANSWERS_2,
-    statusbar: {
-      time: 'NN',
-      lives: 2
-    },
     question: {
       description: 'Угадайте для каждого изображения фото или рисунок?',
       options: [
