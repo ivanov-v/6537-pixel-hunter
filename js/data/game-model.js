@@ -17,6 +17,10 @@ class GameModel {
     this._state = setLevel(this._state, this._state.level - 1);
   }
 
+  isDead() {
+    return this._state.lives === 0;
+  }
+
   getCurrentLevel() {
     return getLevel(this._state.level);
   }
